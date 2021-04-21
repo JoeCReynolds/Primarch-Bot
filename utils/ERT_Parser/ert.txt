@@ -1,0 +1,34 @@
+"{time:00:09} |cff4a67afCleansing 1|r - 00:09 - |cff808080Jazz|r {spell:62618}  |cffc31d39Vader|r {spell:165775}  |cffa22fc8Bob|r {spell:196718}  
+{time:00:24} |cffff6680Blood Price 1|r - 00:24 - |cfff38bb9Val|r {spell:31821}  |cffc59a6cSunnie|r {spell:97462}  
+{time:00:34} |cff4a67afCleansing 2|r - 00:34 - |cff00fe97Nam|r {spell:115310}  |cff006fdcOsy|r {spell:98008}  |cfffefefeVal|r {spell:321079}  
+{time:01:07} |cff4a67afCleansing 3|r - 01:07 - |cffc31d39Sweat|r {spell:165775}  |cff006fdcOsy|r {spell:108280}  
+{time:01:22} |cffff6680Blood Price 2|r - 01:22 - |cffc59a6cRook|r {spell:97462}  
+{time:01:32} |cff4a67afCleansing 4|r - 01:32 - |cff00fe97Nam|r {spell:325197}  
+{time:02:05} |cff4a67afCleansing 5|r - 02:05 - 
+{time:02:20} |cffff6680Blood Price 3|r - 02:20 - |cfffefefeALL|r {spell:193743}  
+{time:02:29} |cff4a67afCleansing 6|r - 02:29 - |cffc31d39Vader|r {spell:165775}  
+ |cff808080P2 March of the Pentient|r - 03:08 - 
+{time:00:38,p2} |cff8665b9Big add 1|r - 03:13 - |cffc31d39Sweat|r {spell:165775}  
+{time:01:07,p2} |cffffe666Impale 1|r - 03:57 - |cff006fdcOsy|r {spell:98008}  
+{time:01:23,p2} |cff8665b9Big add 2|r - 04:08 - |cff808080Jazz|r {spell:62618}  |cfffefefeRen|r {spell:321079}  
+{time:01:40,p2} |cff99c084Cabalists 1|r - 04:30 - |cff006fdcOsy|r {spell:108280}  |cffc31d39Vader|r {spell:165775}  
+{time:01:46,p2} |cffffe666Impale 2|r - 04:36 - |cff00fe97Nam|r {spell:115310}  
+{time:02:15,p2} |cff99c084Cabalists 2|r - 05:05 - |cfffefefeVal|r {spell:321079}  |cfff38bb9Val|r {spell:31821}  
+{time:02:22,p2} |cffffe666Impale 3|r - 05:12 - |cff00fe97Nam|r {spell:325197}  
+{time:02:40,p2} |cff99c084Cabalists 3|r - 05:30 - |cffc31d39Sweat|r {spell:165775}  
+{time:03:07,p2} |cffffe666Impale 4|r - 05:57 - |cffc59a6cSunnie|r {spell:97462}  
+{time:03:08,p2} |cff99c084Cabalists 4|r - 05:58 - 
+ |cff808080P3 Indignation|r - 06:44 - 
+{time:00:06,p3} |cff4a67afShattering 1|r - 06:50 - |cfffefefeALL|r {spell:193743}  |cffc31d39Vader|r {spell:165775}  
+{time:00:16,p3} |cffff6680Blood Price 1|r - 07:00 - |cffc59a6cRook|r {spell:97462}  
+{time:00:32,p3} |cff4a67afShattering 2|r - 07:16 - |cff006fdcOsy|r {spell:98008}  
+{time:00:54,p3} |cff4a67afShattering 3|r - 07:38 - |cffc31d39Sweat|r {spell:165775}  
+{time:01:18,p3} |cff4a67afShattering 4|r - 08:02 - |cff00fe97Nam|r {spell:115310}  
+{time:01:28,p3} |cffff6680Blood Price 2|r - 08:12 - |cfff38bb9Val|r {spell:31821}  
+{time:01:42,p3} |cff4a67afShattering 5|r - 08:26 - |cff006fdcOsy|r {spell:108280}  
+{time:02:08,p3} |cff4a67afShattering 6|r - 08:52 - |cff00fe97Nam|r {spell:325197}  
+{time:02:30,p3} |cff4a67afShattering 7|r - 09:14 - |cff808080Jazz|r {spell:62618}  |cfffefefeVal|r {spell:321079}  
+{time:02:40,p3} |cffff6680Blood Price 3|r - 09:24 - |cffc59a6cSunnie|r {spell:97462}  
+{time:02:54,p3} |cff4a67afShattering 8|r - 09:38 - |cffc31d39Vader|r {spell:165775}  
+{time:03:12,p3} |cff808080Final Ravage | Enrage|r - 09:56 - 
+"
