@@ -45,6 +45,7 @@ async function translate(toTranslate, targetLanguage) {
         return translation.result.translations[0].translation;
     } catch (error) {
         console.log("Error: " + error);
+        return "Unable to automatically detect the source language, confidence too low";
     }
 }
 

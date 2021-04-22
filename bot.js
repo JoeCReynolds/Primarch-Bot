@@ -1,9 +1,20 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const discordTTS = require("discord-tts");
+const fs = require('fs');
 
-const {translate} = require('./src/translator/language_translator');
+const {translate} = require('./commands/translate');
+const {getBossEncounter} = require('./commands/encounter');
+
+const commandFiles = fs.readdirSync("./commands/").filter(file => file.endsWith(".js"));
+
+// Store commands in this
+client.commands = new Discord.Collection();
+
+for (const file of commandFiles) {
+    const command = require(`./commands/${file}`);
+    client.commands.set(command.name, command);
+}
 
 client.on("ready", () => {
     console.log("Logged in");
@@ -24,29 +35,38 @@ client.on("message", async message => {
     // Get the boss and budget from the user input
     const command = split[0].toLowerCase();
 
-    if (command === "translate") {
-        const targetLanguage = args[0];
-        let toBeTranslated = withoutPrefix.substring((command.length+targetLanguage.length)+2, withoutPrefix.length);
-        let translatedText = await translate(toBeTranslated, targetLanguage);
-        if (translatedText) {
-            console.log(translatedText);
+    switch (command) {
+        case "translate":
+            const targetLanguage = args[0];
+            let toBeTranslated = withoutPrefix.substring((command.length+targetLanguage.length)+2, withoutPrefix.length);
+            let translatedText = await client.commands.get("translate").execute(toBeTranslated, targetLanguage);
             message.channel.send(translatedText);
-        }
-    } else if (message.content.includes("wago.io") && message.author.id === "160871821762101249") {
+            break;
+        case "encounter":
+            let boss = "";
+            if (args[0]) {
+                boss = args[0];
+            } else {
+                message.channel.send("You need to specify a boss name.");
+                return;
+            }
+            client.commands.get("encounter").execute(boss, message, client); // Returns a JSON object with timings and CDs
+            break;
+        case "addboss":
+            let bossToAdd = "";
+            if (args[0]) {
+                bossToAdd = args[0];
+            } else {
+                message.channel.send("You need to specify a boss name for me to add.");
+                return;
+            }
+            client.commands.get("addboss").execute(bossToAdd, message); //TODO: Look into how to do the file stuff
+            break;
+    }
+
+    if (message.content.includes("wago.io") && message.author.id === "160871821762101249") {
         const excusemeEmoji = client.emojis.cache.get(process.env.EXCUSEME_EMOJI);
         message.react(excusemeEmoji);
-    } else if (message.content.includes("start encounter")) {
-        try {
-            const broadcast = client.voice.createBroadcast();
-            let channelId = message.member.voice.channelID;
-            let channel = client.channels.cache.get(channelId);
-            let connection = await channel.join();
-            broadcast.play(discordTTS.getVoiceStream("test 123"));
-            const dispatcher = await connection.play(broadcast);
-        } catch (error) {
-            console.log("Error: " + error);
-        }
-        
     }
 });
 
