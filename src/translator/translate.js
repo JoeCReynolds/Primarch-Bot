@@ -1,5 +1,5 @@
 require('dotenv').config();
-const languages = require('./languages.json');
+const languages = require('.');
 const LanguageTranslatorV3 = require('ibm-watson/language-translator/v3');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
