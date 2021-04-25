@@ -3,7 +3,8 @@ const SPELLS = require('./spells.json');
 const BOSSES = require('./ERT_Bosses.json');
 
 async function parseErtNote(bossName) {
-    // This will eventually read a file from Discord
+    // temp.txt is a temporary file created by addboss.js which tempoarily stores
+    // the contents of the file sent in discord
     let rawFile = fs.readFileSync("./utils/ERT_Parser/temp.txt", {encoding: "utf8", flag: "r"});
     let fileArray = rawFile.split("\r\n");
     let cooldownsMap = new Map();
