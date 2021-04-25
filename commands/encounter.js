@@ -25,7 +25,7 @@ module.exports = {
                     }, key);
                 }
             } else {
-                message.channel.send("That boss does not exist on memory.");
+                message.channel.send("That boss does not exist in memory.");
             }
         } catch (error) {
             message.channel.send("Something went wrong :(");
